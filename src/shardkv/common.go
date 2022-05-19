@@ -14,6 +14,8 @@ const (
 	ErrNoKey       = "ErrNoKey"
 	ErrWrongGroup  = "ErrWrongGroup"
 	ErrWrongLeader = "ErrWrongLeader"
+	ErrTimeout     = "ErrTimeout"
+	ErrWrongOp     = "ErrWrongOp"
 )
 
 type Err string
@@ -27,6 +29,8 @@ type PutAppendArgs struct {
 	// You'll have to add definitions here.
 	// Field names must start with capital letters,
 	// otherwise RPC will break.
+	ClientId int64
+	RequestId int64
 }
 
 type PutAppendReply struct {
@@ -36,9 +40,39 @@ type PutAppendReply struct {
 type GetArgs struct {
 	Key string
 	// You'll have to add definitions here.
+	ClientId  int64
+	RequestId int64
 }
 
 type GetReply struct {
 	Err   Err
 	Value string
+}
+
+type PullShardArgs struct {
+	ShardIds  []int
+	ConfigNum int
+}
+type PullShardReply struct {
+	Err	  Err
+	Shards map[int]*Shard
+	ConfigNum int
+}
+type EraseShardArgs struct {
+	ConfigNum int
+	ShardIds  []int
+}
+type EraseShardReply struct {
+	Err		Err
+}
+type OpCommandArgs struct {
+	Op  string
+	Key string
+	Value string
+	ClientId  int64
+	RequestId int64
+}
+type OpCommandReply struct {
+	Err    Err
+	Value  string
 }
