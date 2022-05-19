@@ -1,0 +1,53 @@
+=== RUN   TestStaticShards
+Test: static shards ...
+  ... Passed
+--- PASS: TestStaticShards (4.24s)
+=== RUN   TestJoinLeave
+Test: join then leave ...
+  ... Passed
+--- PASS: TestJoinLeave (2.49s)
+=== RUN   TestSnapshot
+Test: snapshots, join, and leave ...
+  ... Passed
+--- PASS: TestSnapshot (4.64s)
+=== RUN   TestMissChange
+Test: servers miss configuration changes...
+  ... Passed
+--- PASS: TestMissChange (4.31s)
+=== RUN   TestConcurrent1
+Test: concurrent puts and configuration changes...
+  ... Passed
+--- PASS: TestConcurrent1 (4.21s)
+=== RUN   TestConcurrent2
+Test: more concurrent puts and configuration changes...
+  ... Passed
+--- PASS: TestConcurrent2 (13.93s)
+=== RUN   TestConcurrent3
+Test: concurrent configuration change and restart...
+  ... Passed
+--- PASS: TestConcurrent3 (16.45s)
+=== RUN   TestUnreliable1
+Test: unreliable 1...
+  ... Passed
+--- PASS: TestUnreliable1 (9.48s)
+=== RUN   TestUnreliable2
+Test: unreliable 2...
+  ... Passed
+--- PASS: TestUnreliable2 (7.39s)
+=== RUN   TestUnreliable3
+Test: unreliable 3...
+  ... Passed
+--- PASS: TestUnreliable3 (7.73s)
+=== RUN   TestChallenge1Delete
+Test: shard deletion (challenge 1) ...
+  ... Passed
+--- PASS: TestChallenge1Delete (16.97s)
+=== RUN   TestChallenge2Unaffected
+Test: unaffected shard access (challenge 2) ...
+  ... Passed
+--- PASS: TestChallenge2Unaffected (6.40s)
+=== RUN   TestChallenge2Partial
+Test: partial migration shard access (challenge 2) ...
+  ... Passed
+--- PASS: TestChallenge2Partial (6.58s)
+PASS

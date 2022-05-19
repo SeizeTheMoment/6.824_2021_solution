@@ -1,0 +1,37 @@
+=== RUN   TestSnapshotRPC3B
+Test: InstallSnapshot RPC (3B) ...
+  ... Passed --   3.0  3   284   63
+--- PASS: TestSnapshotRPC3B (2.99s)
+=== RUN   TestSnapshotSize3B
+Test: snapshot size is reasonable (3B) ...
+  ... Passed --   1.2  3  2391  800
+--- PASS: TestSnapshotSize3B (1.19s)
+=== RUN   TestSpeed3B
+Test: ops complete fast enough (3B) ...
+  ... Passed --   1.7  3  8242    0
+--- PASS: TestSpeed3B (1.68s)
+=== RUN   TestSnapshotRecover3B
+Test: restarts, snapshots, one client (3B) ...
+  ... Passed --  20.4  5 58060 11335
+--- PASS: TestSnapshotRecover3B (20.43s)
+=== RUN   TestSnapshotRecoverManyClients3B
+Test: restarts, snapshots, many clients (3B) ...
+  ... Passed --  20.6  5 35586 9510
+--- PASS: TestSnapshotRecoverManyClients3B (20.57s)
+=== RUN   TestSnapshotUnreliable3B
+Test: unreliable net, snapshots, many clients (3B) ...
+  ... Passed --  16.6  5  5864 1062
+--- PASS: TestSnapshotUnreliable3B (16.64s)
+=== RUN   TestSnapshotUnreliableRecover3B
+Test: unreliable net, restarts, snapshots, many clients (3B) ...
+  ... Passed --  21.7  5  9365 1010
+--- PASS: TestSnapshotUnreliableRecover3B (21.66s)
+=== RUN   TestSnapshotUnreliableRecoverConcurrentPartition3B
+Test: unreliable net, restarts, partitions, snapshots, many clients (3B) ...
+  ... Passed --  28.5  5  8580  632
+--- PASS: TestSnapshotUnreliableRecoverConcurrentPartition3B (28.47s)
+=== RUN   TestSnapshotUnreliableRecoverConcurrentPartitionLinearizable3B
+Test: unreliable net, restarts, partitions, snapshots, random keys, many clients (3B) ...
+  ... Passed --  30.5  7 19898 1402
+--- PASS: TestSnapshotUnreliableRecoverConcurrentPartitionLinearizable3B (30.52s)
+PASS
